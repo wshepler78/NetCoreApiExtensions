@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Will Shepler</Authors>
+    <Copyright>2020</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Description>A collection of objects for API development</Description>
+    <PackageId>NetCoreApiExtensions.Shared</PackageId>
+    <AssemblyName>NetCoreApiExtensions.Shared</AssemblyName>
+    <RootNamespace>NetCoreApiExtensions.Shared</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
