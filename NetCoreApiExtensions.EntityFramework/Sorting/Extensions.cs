@@ -25,6 +25,11 @@ namespace NetCoreApiExtensions.EntityFramework
             return query.OrderBy(sortTuple.Item1, sortTuple.Item2);
         }
 
+        public static IQueryable<T> OrderBy<T>(this IQueryable<T> query, params Tuple<Expression<Func<T, object>>, SortDirection>[] sortTuples)
+        {
+            return sortTuples.Aggregate(query, (current, sortTuple) => current.OrderBy(sortTuple));
+        }
+
         public static IQueryable<T> OrderBy<T>(this IQueryable<T> query, SortExpression<T> sortExpression)
         {
             return query.OrderBy(sortExpression.KeySelector, sortExpression.SortDirection);
