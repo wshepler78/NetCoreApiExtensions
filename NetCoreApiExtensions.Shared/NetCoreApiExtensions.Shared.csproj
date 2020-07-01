@@ -25,7 +25,7 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="NetCoreApiExtensions_Shared_icon.png">
+    <None Include="..\NetCoreApiExtensions_Shared_icon.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
