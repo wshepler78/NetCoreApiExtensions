@@ -1,9 +1,12 @@
 using System;
+using System.Text.Json.Serialization;
 
 namespace NetCoreApiExtensions.Shared.Exceptions
 {
     public class ExceptionDetails
     {
+        public string Message => Exception?.Message;
+        [JsonIgnore]
         public Exception Exception { get; set; }
         public ExceptionDetailsRequest RequestContext { get; set; }
         public DateTime ExceptionTime { get; } = DateTime.Now;

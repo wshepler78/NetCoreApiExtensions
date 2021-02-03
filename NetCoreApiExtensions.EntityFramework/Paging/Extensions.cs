@@ -19,13 +19,15 @@ namespace NetCoreApiExtensions.EntityFramework
         {
             var totalCount = await query.CountAsync();
 
+            var pageIndex = page - 1 >= 0 ? page - 1 : 0;
+
             var result = new PagedResult<T>
             {
                 CurrentPage = page,
                 ResultsPerPage = numberPerPage,
                 TotalCount = totalCount,
                 Data = await query
-                                 .Skip(page * numberPerPage)
+                                 .Skip(pageIndex * numberPerPage)
                                  .Take(numberPerPage)
                                  .ToListAsync()
             };
