@@ -1,8 +1,8 @@
 ﻿namespace NetCoreApiExtensions.Shared
 {
-    public interface IListItem<T, TV>
+    public interface IListItem<out T, out TV>
     {
-        T Key { get; set; }
-        TV Value { get; set; }
+        T Key { get; }
+        TV Value { get; }
     }
 }
