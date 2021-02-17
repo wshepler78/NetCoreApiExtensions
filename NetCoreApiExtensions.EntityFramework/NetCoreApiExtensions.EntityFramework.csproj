@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>NetCoreApiExtensions.EntityFramework</AssemblyName>
     <RootNamespace>NetCoreApiExtensions.EntityFramework</RootNamespace>
     <Authors>Will Shepler</Authors>
@@ -12,10 +12,11 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/wshepler78/NetCoreApiExtensions</RepositoryUrl>
     <PackageTags>EFCore, EFExtensions, NetCore, API Tools</PackageTags>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
-    <Version>1.0.1.0</Version>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
+    <Version>1.0.2.0</Version>
     <PackageIcon>NetCoreApiExtensions_EntityFramework_icon.png</PackageIcon>
+    <PackageReleaseNotes>Updated to use netstandard2.1 instead of core.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
