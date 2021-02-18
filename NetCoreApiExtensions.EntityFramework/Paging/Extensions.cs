@@ -18,10 +18,11 @@ namespace NetCoreApiExtensions.EntityFramework
         {
             numberPerPage = Math.Abs(numberPerPage);
             page = Math.Abs(page);
+            page = page > 0 ? page : 1;
             var pageCount = new long?();
 
             var totalCount = await query.LongCountAsync();
-            var pageIndex = page - 1 >= 0 ? page - 1 : 0;
+            var pageIndex = page - 1;
 
             if (numberPerPage > 0)
             {
