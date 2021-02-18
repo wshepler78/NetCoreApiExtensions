@@ -8,15 +8,15 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Description>A small set of extensions for EF Core to simplify and consolidate common EF tasks like sorting and paging.</Description>
-    <Copyright>2020</Copyright>
+    <Copyright>2021</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/wshepler78/NetCoreApiExtensions</RepositoryUrl>
     <PackageTags>EFCore, EFExtensions, NetCore, API Tools</PackageTags>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
-    <Version>1.0.2.0</Version>
+    <AssemblyVersion>1.0.2.1</AssemblyVersion>
+    <FileVersion>1.0.2.1</FileVersion>
+    <Version>1.0.2.1</Version>
     <PackageIcon>NetCoreApiExtensions_EntityFramework_icon.png</PackageIcon>
-    <PackageReleaseNotes>Updated to use netstandard2.1 instead of core.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated Paging extensions to default page to 1 if the page supplied is set to 0.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
