@@ -4,8 +4,8 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Authors>Will Shepler</Authors>
-    <Copyright>2020</Copyright>
+    <Authors>Will Shepler, Garrett Davis</Authors>
+    <Copyright>2021</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Description>A collection of objects for API development</Description>
     <PackageId>NetCoreApiExtensions.Shared</PackageId>
@@ -14,9 +14,9 @@
     <RepositoryUrl>https://github.com/wshepler78/NetCoreApiExtensions</RepositoryUrl>
     <PackageProjectUrl>https://github.com/wshepler78/NetCoreApiExtensions</PackageProjectUrl>
     <PackageTags>NetCore, ErrorHandling, API Tools, Paging</PackageTags>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
-    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
+    <Version>1.0.3</Version>
     <PackageIcon>NetCoreApiExtensions_Shared_icon.png</PackageIcon>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
