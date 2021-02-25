@@ -10,6 +10,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1034A034-1EA2-48CE-9CFD-44C855BDBFEE}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
+		NetCoreApiExtensions_EntityFramework_icon.png = NetCoreApiExtensions_EntityFramework_icon.png
+		NetCoreApiExtensions_Shared_icon.png = NetCoreApiExtensions_Shared_icon.png
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreApiExtensions.Shared", "NetCoreApiExtensions.Shared\NetCoreApiExtensions.Shared.csproj", "{9CC5AE97-1090-497B-9304-EE6199D86286}"

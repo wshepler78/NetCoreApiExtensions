@@ -4,7 +4,6 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using NetCoreApiExtensions.Shared;
-using NetCoreApiExtensions.Shared.Enumerations;
 
 namespace NetCoreApiExtensions.EntityFramework
 {
@@ -17,17 +16,30 @@ namespace NetCoreApiExtensions.EntityFramework
 
         public static async Task<PagedResult<T>> ToPagedResultAsync<T>(this IQueryable<T> query, int page, int numberPerPage)
         {
-            var totalCount = await query.CountAsync();
+            numberPerPage = Math.Abs(numberPerPage);
+            page = Math.Abs(page);
+            page = page > 0 ? page : 1;
+            var pageCount = new long?();
 
+            var totalCount = await query.LongCountAsync();
+            var pageIndex = page - 1;
+
+            if (numberPerPage > 0)
+            {
+                var modResult = totalCount % numberPerPage == 0 ? 0 : 1;
+                pageCount = totalCount / numberPerPage + modResult;
+            }
+            
             var result = new PagedResult<T>
             {
                 CurrentPage = page,
                 ResultsPerPage = numberPerPage,
                 TotalCount = totalCount,
                 Data = await query
-                                 .Skip(page * numberPerPage)
+                                 .Skip(pageIndex * numberPerPage)
                                  .Take(numberPerPage)
-                                 .ToListAsync()
+                                 .ToListAsync(),
+                TotalPages = pageCount.GetValueOrDefault()
             };
 
             return result;
