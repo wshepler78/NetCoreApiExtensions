@@ -4,14 +4,21 @@ using NetCoreApiExtensions.Shared.Enumerations;
 
 namespace NetCoreApiExtensions.EntityFramework
 {
-    public class SortExpression<T> : Tuple<Expression<Func<T, object>>, SortDirection>
+    public class SortExpression<T, TKey>
     {
-        public Expression<Func<T, object>> KeySelector => Item1;
-        public SortDirection SortDirection => Item2;
-
-        public SortExpression(Expression<Func<T, object>> expression, SortDirection sortDirection) : base(expression, sortDirection)
+        public Expression<Func<T, TKey>> KeySelector { get; set; }
+        public SortDirection SortDirection { get; set; }
+        
+        public SortExpression()
         {
 
         }
+
+        public SortExpression(Expression<Func<T, TKey>> keySelector, SortDirection sortDirection)
+        {
+            KeySelector = keySelector;
+            SortDirection = sortDirection;
+        }
+
     }
 }
