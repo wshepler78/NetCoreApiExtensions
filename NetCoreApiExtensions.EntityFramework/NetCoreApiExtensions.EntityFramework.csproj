@@ -12,11 +12,11 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/wshepler78/NetCoreApiExtensions</RepositoryUrl>
     <PackageTags>EFCore, EFExtensions, NetCore, API Tools</PackageTags>
-    <AssemblyVersion>1.0.3.1</AssemblyVersion>
-    <FileVersion>1.0.3.1</FileVersion>
-    <Version>1.0.3.1</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.1.0.0</Version>
     <PackageIcon>NetCoreApiExtensions_EntityFramework_icon.png</PackageIcon>
-    <PackageReleaseNotes>Updated Sorting Extensions to be more in line with EF.</PackageReleaseNotes>
+    <PackageReleaseNotes>Added support for supplying multiple sort expressions</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
