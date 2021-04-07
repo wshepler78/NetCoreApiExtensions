@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Will Shepler</Authors>
+    <Copyright>2021</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Description>Additional tools for EF Core Relational</Description>
+    <RepositoryUrl>https://github.com/wshepler78/NetCoreApiExtensions</RepositoryUrl>
+    <PackageTags>EFCore, EFExtensions, NetCore, EFCore.Relational, EntitiyFrameworkCore.Relational</PackageTags>
+    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+    <PackageIcon>NetCoreApiExtensions_EntityFramework_Relational_icon.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.5" />
+    <PackageReference Include="NetCoreApiExtensions.EntityFramework" Version="1.1.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\NetCoreApiExtensions_EntityFramework_Relational_icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+</Project>
