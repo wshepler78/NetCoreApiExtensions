@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Globalization;
 using System.Linq;
-using System.Reflection;
 
 namespace NetCoreApiExtensions.Shared.Extensions
 {
@@ -11,6 +9,12 @@ namespace NetCoreApiExtensions.Shared.Extensions
     {
         /// <returns>Returns the entire enum list as ListItems, using the description attribute or [value]:G as the value, and the enum value as the key.</returns>
         public static List<ListItem<T, string>> GetEnumList<T>(this T enumValue) where T : struct, Enum
+        {
+            return GetEnumList<T, DescriptionAttribute>(enumValue, descriptionAttribute => descriptionAttribute.Description);
+        }
+
+        /// <returns>Returns the entire enum list as ListItems, using the attribute to string method  or [value]:G as the value, and the enum value as the key.</returns>
+        public static List<ListItem<T, string>> GetEnumList<T, TA>(this T enumValue, Func<TA, string> descriptionMethod) where T : struct, Enum where TA : Attribute
         {
             var results = new List<ListItem<T, string>>();
 
@@ -30,14 +34,15 @@ namespace NetCoreApiExtensions.Shared.Extensions
                         var stringValue = $"{parsedValue:G}";
                         var memInfo = type.GetMember(stringValue);
                         if (memInfo[0]
-                            .GetCustomAttributes(typeof(DescriptionAttribute), false)
-                            .FirstOrDefault() is DescriptionAttribute attribute)
+                            .GetCustomAttributes(typeof(TA), false)
+                            .FirstOrDefault() is TA attribute)
                         {
-                            results.Add(new ListItem<T, string> {Key = parsedValue, Value = attribute.Description});
+                            var valueString = descriptionMethod.Invoke(attribute);
+                            results.Add(new ListItem<T, string> { Key = parsedValue, Value = valueString });
                         }
                         else
                         {
-                            results.Add(new ListItem<T, string> {Key = parsedValue, Value = stringValue});
+                            results.Add(new ListItem<T, string> { Key = parsedValue, Value = stringValue });
                         }
                     }
                 }
@@ -49,6 +54,5 @@ namespace NetCoreApiExtensions.Shared.Extensions
 
             return results;
         }
-
     }
 }

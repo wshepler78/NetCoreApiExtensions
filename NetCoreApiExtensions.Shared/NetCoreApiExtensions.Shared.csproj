@@ -14,12 +14,12 @@
     <RepositoryUrl>https://github.com/wshepler78/NetCoreApiExtensions</RepositoryUrl>
     <PackageProjectUrl>https://github.com/wshepler78/NetCoreApiExtensions</PackageProjectUrl>
     <PackageTags>NetCore, ErrorHandling, API Tools, Paging</PackageTags>
-    <AssemblyVersion>1.2.0.0</AssemblyVersion>
-    <FileVersion>1.2.0.0</FileVersion>
-    <Version>1.2.0.0</Version>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <FileVersion>1.2.1.0</FileVersion>
+    <Version>1.2.1.0</Version>
     <PackageIcon>NetCoreApiExtensions_Shared_icon.png</PackageIcon>
     <LangVersion>latest</LangVersion>
-    <PackageReleaseNotes>Added Enum Extension for creating Lists from the [Description] attribute</PackageReleaseNotes>
+    <PackageReleaseNotes>Added Enum Extension for creating Lists from generic string Func&lt;TA, string&gt;</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
