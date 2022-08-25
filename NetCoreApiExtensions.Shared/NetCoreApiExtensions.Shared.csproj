@@ -14,12 +14,12 @@
     <RepositoryUrl>https://github.com/wshepler78/NetCoreApiExtensions</RepositoryUrl>
     <PackageProjectUrl>https://github.com/wshepler78/NetCoreApiExtensions</PackageProjectUrl>
     <PackageTags>NetCore, ErrorHandling, API Tools, Paging</PackageTags>
-    <AssemblyVersion>1.3.1.0</AssemblyVersion>
-    <FileVersion>1.3.1.0</FileVersion>
-    <Version>1.3.1.0</Version>
+    <AssemblyVersion>1.3.2.0</AssemblyVersion>
+    <FileVersion>1.3.2.0</FileVersion>
+    <Version>1.3.2.0</Version>
     <PackageIcon>NetCoreApiExtensions_Shared_icon.png</PackageIcon>
     <LangVersion>latest</LangVersion>
-    <PackageReleaseNotes>Added Enum Extension for creating Lists from generic string Func&lt;TA, string&gt;</PackageReleaseNotes>
+    <PackageReleaseNotes>Added additional error options for string lists and IListItem&lt;string, string&gt;</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

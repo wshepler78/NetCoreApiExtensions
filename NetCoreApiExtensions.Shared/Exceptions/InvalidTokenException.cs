@@ -28,5 +28,9 @@ namespace NetCoreApiExtensions.Shared.Exceptions
         public InvalidTokenException(string message, Exception innerException, IEnumerable<string> errors) : base(message?.Length > 0 ? message : ErrorMessage, innerException, errors)
         {
         }
+
+        public InvalidTokenException(string message, IEnumerable<IListItem<string, string>> keyedErrors) : base(message, keyedErrors)
+        {
+        }
     }
 }

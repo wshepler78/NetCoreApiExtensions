@@ -12,7 +12,7 @@ namespace NetCoreApiExtensions.Shared.Exceptions
         {
         }
 
-        public QueryException(string message) : this(message, null, null)
+        public QueryException(string message) : base(message)
         {
         }
 
@@ -24,7 +24,15 @@ namespace NetCoreApiExtensions.Shared.Exceptions
         {
         }
 
+        public QueryException(string message, IEnumerable<IListItem<string, string>> keyedErrors) : base(message?.Length > 0 ? message : ErrorMessage, keyedErrors)
+        {
+        }
+
         public QueryException(string message, Exception innerException, IEnumerable<string> errors) : base(message?.Length > 0 ? message : ErrorMessage, innerException, errors)
+        {
+        }
+
+        public QueryException(string message, Exception innerException, IEnumerable<IListItem<string, string>> keyedErrors) : base(message?.Length > 0 ? message : ErrorMessage, innerException, keyedErrors)
         {
         }
     }

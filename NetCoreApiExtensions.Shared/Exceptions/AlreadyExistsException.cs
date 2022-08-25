@@ -12,7 +12,7 @@ namespace NetCoreApiExtensions.Shared.Exceptions
         {
         }
 
-        public AlreadyExistsException(string message) : this(message, null, null)
+        public AlreadyExistsException(string message) : base(message)
         {
 
         }
@@ -26,6 +26,14 @@ namespace NetCoreApiExtensions.Shared.Exceptions
         }
 
         public AlreadyExistsException(string message, Exception innerException, IEnumerable<string> errors) : base(message?.Length > 0 ? message : ErrorMessage, innerException, errors)
+        {
+        }
+
+        public AlreadyExistsException(string message, IEnumerable<IListItem<string, string>> keyedErrors) : base(message?.Length > 0 ? message : ErrorMessage, null, keyedErrors)
+        {
+        }
+
+        public AlreadyExistsException(string message, Exception innerException, IEnumerable<IListItem<string, string>> keyedErrors) : base(message?.Length > 0 ? message : ErrorMessage, innerException, keyedErrors)
         {
         }
     }

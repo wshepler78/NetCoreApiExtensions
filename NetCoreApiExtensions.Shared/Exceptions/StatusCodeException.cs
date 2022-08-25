@@ -11,6 +11,7 @@ namespace NetCoreApiExtensions.Shared.Exceptions
     {
         public HttpStatusCode StatusCode { get; }
         public List<string> Errors { get; }
+        public List<IListItem<string, string>> KeyedErrors { get; }
 
         public StatusCodeException() : this(string.Empty)
         {
@@ -28,20 +29,25 @@ namespace NetCoreApiExtensions.Shared.Exceptions
         {
         }
 
-        public StatusCodeException(HttpStatusCode code, string message) : this(code, message, null, null)
+        public StatusCodeException(HttpStatusCode code, string message) : this(code, message, null, null, null)
         {
         }
 
-        public StatusCodeException(HttpStatusCode code, string message, Exception innerException) : this(code, message, innerException, null)
+        public StatusCodeException(HttpStatusCode code, string message, Exception innerException) : this(code, message, innerException, null, null)
         {
         }
 
-        public StatusCodeException(HttpStatusCode code, string message, IEnumerable<string> errors) : this(code, message, null, errors)
+        public StatusCodeException(HttpStatusCode code, string message, IEnumerable<string> errors) : this(code, message, null, errors, null)
         {
         }
 
-        public StatusCodeException(HttpStatusCode code, string message, Exception innerException, IEnumerable<string> errors) : base(message, innerException)
+        public StatusCodeException(HttpStatusCode code, string message, IEnumerable<IListItem<string, string>> keyedErrors) : this(code, message, null, null, keyedErrors)
         {
+        }
+
+        public StatusCodeException(HttpStatusCode code, string message, Exception innerException, IEnumerable<string> errors, IEnumerable<IListItem<string, string>> keyedErrors) : base(message, innerException)
+        {
+            KeyedErrors = keyedErrors != null ? keyedErrors.ToList() : new List<IListItem<string, string>>();
             Errors = errors != null ? errors.ToList() : new List<string>();
             StatusCode = code;
         }

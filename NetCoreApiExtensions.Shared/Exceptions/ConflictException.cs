@@ -8,15 +8,17 @@ namespace NetCoreApiExtensions.Shared.Exceptions
     [Serializable]
     public class ConflictException : StatusCodeException
     {
+        public static HttpStatusCode ErrorStatusCode = HttpStatusCode.Conflict;
+
         public ConflictException() : this(null)
         {
         }
 
-        public ConflictException(string message) : this(message, null, null)
+        public ConflictException(string message) : base(ErrorStatusCode, message)
         {
         }
 
-        public ConflictException(string message, Exception innerException) : base(HttpStatusCode.Conflict, message, innerException)
+        public ConflictException(string message, Exception innerException) : base(ErrorStatusCode, message, innerException)
         {
         }
 
@@ -24,7 +26,15 @@ namespace NetCoreApiExtensions.Shared.Exceptions
         {
         }
 
-        public ConflictException(string message, Exception innerException, IEnumerable<string> errors) : base(HttpStatusCode.Conflict, message, innerException, errors)
+        public ConflictException(string message, Exception innerException, IEnumerable<string> errors) : base(ErrorStatusCode, message, innerException, errors, null)
+        {
+        }
+
+        public ConflictException(string message, IEnumerable<IListItem<string, string>> keyedErrors) : base(ErrorStatusCode, null, null, null, keyedErrors)
+        {
+        }
+
+        public ConflictException(string message, Exception innerException, IEnumerable<IListItem<string, string>> keyedErrors) : base(ErrorStatusCode, null, innerException, null, keyedErrors)
         {
         }
 
