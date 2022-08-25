@@ -10,7 +10,9 @@ namespace NetCoreApiExtensions.Shared.Exceptions
     public class StatusCodeException : Exception, IStatusCodeException
     {
         public HttpStatusCode StatusCode { get; }
+        ICollection<string> IStatusCodeException.Errors => Errors;
         public List<string> Errors { get; }
+        ICollection<IListItem<string, string>> IStatusCodeException.KeyedErrors => KeyedErrors;
         public List<IListItem<string, string>> KeyedErrors { get; }
 
         public StatusCodeException() : this(string.Empty)

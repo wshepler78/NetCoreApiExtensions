@@ -14,9 +14,9 @@
     <RepositoryUrl>https://github.com/wshepler78/NetCoreApiExtensions</RepositoryUrl>
     <PackageProjectUrl>https://github.com/wshepler78/NetCoreApiExtensions</PackageProjectUrl>
     <PackageTags>NetCore, ErrorHandling, API Tools, Paging</PackageTags>
-    <AssemblyVersion>1.3.2.0</AssemblyVersion>
-    <FileVersion>1.3.2.0</FileVersion>
-    <Version>1.3.2.0</Version>
+    <AssemblyVersion>1.3.2.1</AssemblyVersion>
+    <FileVersion>1.3.2.1</FileVersion>
+    <Version>1.3.2.1</Version>
     <PackageIcon>NetCoreApiExtensions_Shared_icon.png</PackageIcon>
     <LangVersion>latest</LangVersion>
     <PackageReleaseNotes>Added additional error options for string lists and IListItem&lt;string, string&gt;</PackageReleaseNotes>
