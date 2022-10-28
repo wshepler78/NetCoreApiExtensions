@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net5</TargetFrameworks>
+    <TargetFrameworks>net6</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -14,7 +14,9 @@
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <FileVersion>1.0.1.0</FileVersion>
     <PackageReleaseNotes>Added more constructors for attributes</PackageReleaseNotes>
-    <Version>1.0.1</Version>
+    <Version>2.0.0</Version>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,6 +32,10 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Middleware\" />
   </ItemGroup>
 
 </Project>
