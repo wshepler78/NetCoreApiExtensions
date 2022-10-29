@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Routing;
 
 namespace NetCoreApiExtensions.WebApi.Discovery
@@ -12,7 +13,7 @@ namespace NetCoreApiExtensions.WebApi.Discovery
     /// <seealso cref="System.Attribute" />
     /// <seealso cref="Microsoft.AspNetCore.Mvc.Routing.IRouteTemplateProvider" />
     [AttributeUsage(AttributeTargets.Class)]
-    public class ApiResourceControllerAttribute : Attribute, IRouteTemplateProvider
+    public class ApiResourceControllerAttribute : ApiControllerAttribute, IRouteTemplateProvider
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiResourceControllerAttribute"/> class.
