@@ -31,7 +31,7 @@ Route Template with `rootResourceSegments`:
 $"api/v{{version:apiVersion}}/[Controller]/{{string.Join('/', pathSegments)}}
 ```
 
-## Usage
+## Core
 
 There are many extensions methods provided by this package that can be used to tailor the experience, but the fastest (and most consistent) way to get started is by using the top-level extension that acts as a `WebApplication` factory and replaces the standard `Build()` call.
 
@@ -46,6 +46,26 @@ var app = builder.BuildNetCoreApi("<your API Title>");
 ```
 
 Substitute in the name that you want displayed in SwaggerUI as the parameter to the method. Since this replaces the `builder.Build()` call and does that internally, this should be the *LAST* thing you do before you continuing to configure the app.
+
+## Exception Middleware
+This middleware is designed to sanitize errors using classes from the `NetCoreApiExtensions.Shared` package to respond with meaningful codes when `StatusCodeExceptions` are thrown. It has specific handling for `FluentValidation.ValidationException` and `DataAnnotation.ValidationException` as well that result in `400` responses. Everything else is returned as a `500`. `ILogger` is supported in the following ways:
+
+### NetCoreApiExtension.Shared Exceptions:
+* Warning logged
+
+### Validation Exceptions: 
+* Not logged
+  
+### Unhandled exception Cases:
+* Error Logged
+  
+
+Adding the exception handling Middleware is simple. Once you have your `WebApplication` instance, add the line:
+
+``` C#
+app.UseMiddleware<NetCoreApiExtensionsExceptionHandlingMiddleware>();
+```
+
 
 
 ## What's in it for you?
@@ -117,7 +137,9 @@ This folder structure will create 3 versions of the `WeatherForcastController` a
 
 # Change Log
 ---
-
+## 2.1.0
+* Added formal middleware to handle Exceptions
+  
 ## 2.0.2
 Added
 * Extensions to configure Web APIs

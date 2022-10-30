@@ -1,4 +1,5 @@
 using NetCoreApiExtensions.WebApi.Extensions;
+using NetCoreApiExtensions.WebApi.Middleware.ExceptionHandling;
 
 namespace NetCoreApiExtensions.WebAip.TestHarness;
 
@@ -16,6 +17,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         var app = builder.BuildNetCoreApi("Convention Test Harness");
+        app.UseMiddleware<NetCoreApiExtensionsExceptionHandlingMiddleware>();
 
         app.UseHttpsRedirection();
 

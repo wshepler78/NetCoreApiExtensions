@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NetCoreApiExtensions.Shared.Exceptions;
 using NetCoreApiExtensions.Shared.Responses;
 using NetCoreApiExtensions.WebApi.Discovery;
 
@@ -19,6 +20,17 @@ namespace NetCoreApiExtensions.WebAip.TestHarness.v1_0.Controllers
         public async Task<DataResponse<bool>> GetBool()
         {
             return await Task.FromResult(DataResponse<bool>.Create(true));
+        }
+
+        /// <summary>
+        /// Just blows up.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("boom")]
+        public async Task<DataResponse<bool>> GetBoom()
+        {
+            throw new NotFoundException("It's not here, like, for sure.");
         }
     }
 }

@@ -1,7 +1,4 @@
 using System;
-using System.Text;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.AspNetCore.Mvc.Versioning.Conventions;
@@ -47,14 +44,7 @@ public static class MvcExtensions
 
         services
             .AddControllers()
-            .AddJsonOptions(options =>
-            {
-                options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
-                options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
-                options.JsonSerializerOptions.AllowTrailingCommas = true;
-                options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
-                options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-            });
+            .AddJsonOptions(NetCoreJsonSerializer.NetCoreJsonConfigurationAction);
 
         services.AddCors();
 
