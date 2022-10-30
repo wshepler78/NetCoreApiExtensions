@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using NetCoreApiExtensions.WebApi.Extensions;
 
 namespace NetCoreApiExtensions.WebAip.TestHarness;
@@ -17,8 +16,6 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         var app = builder.BuildNetCoreApi("Convention Test Harness");
-        
-        // Configure the HTTP request pipeline.
 
         app.UseHttpsRedirection();
 

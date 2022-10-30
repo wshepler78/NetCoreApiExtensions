@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NetCoreApiExtensions.Shared.Responses;
 using NetCoreApiExtensions.WebApi.Discovery;
-using NetCoreApiExtensions.WebApi.Responses;
 
 namespace NetCoreApiExtensions.WebAip.TestHarness.v1_0.Controllers
 {
