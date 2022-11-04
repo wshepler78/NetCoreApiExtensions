@@ -84,13 +84,8 @@ public static class SwaggerExtensions
                             continue;
                         }
 
-                        var newKeyPart = keyPart[..1].ToLowerInvariant();
-
-                        if (keyPart.Length > 1)
-                        {
-                            newKeyPart += keyPart[1..];
-                        }
-
+                        var newKeyPart = keyPart.ToLowerInvariant();
+                        
                         keyParts[index] = newKeyPart;
                     }
 

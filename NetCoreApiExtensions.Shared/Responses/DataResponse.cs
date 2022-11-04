@@ -7,6 +7,11 @@
 /// <seealso cref="IApiResponse{TData,TError}"/>
 public class DataResponse<TData> : ServerResponse, IApiResponse<TData, string>
 {
+    public DataResponse()
+    {
+
+    }
+
     private DataResponse(TData data)
     {
         Data = data;
@@ -23,7 +28,7 @@ public class DataResponse<TData> : ServerResponse, IApiResponse<TData, string>
     }
 
     /// <inheritdoc />
-    public TData Data { get; }
+    public TData Data { get; set; }
 
     string IApiResponse<TData, string>.Errors => null;
 }

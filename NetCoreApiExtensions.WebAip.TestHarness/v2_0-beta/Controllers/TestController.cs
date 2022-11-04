@@ -8,7 +8,7 @@ namespace NetCoreApiExtensions.WebAip.TestHarness.v2_0_beta.Controllers
     /// Test Controller in v 2.0 beta
     /// </summary>
     [VersionedApiController]
-    public class TestController : ControllerBase
+    public class TestNameController : ControllerBase
     {
         /// <summary>
         /// Just Returns false

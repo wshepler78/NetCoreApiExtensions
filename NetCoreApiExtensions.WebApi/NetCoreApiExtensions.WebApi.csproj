@@ -11,10 +11,10 @@
     <RepositoryUrl>https://github.com/wshepler78/NetCoreApiExtensions</RepositoryUrl>
     <PackageTags>Core API, WebAPI, API Versioning</PackageTags>
     <PackageIcon>NetCoreApiExtensions_WebApi_icon.png</PackageIcon>
-    <AssemblyVersion>2.1.0.0</AssemblyVersion>
-    <FileVersion>2.1.0.0</FileVersion>
-    <PackageReleaseNotes>Added opinionated convention-based API Wire-up extensions.</PackageReleaseNotes>
-    <Version>2.1.0.0</Version>
+    <AssemblyVersion>2.1.1.0</AssemblyVersion>
+    <FileVersion>2.1.1.0</FileVersion>
+    <PackageReleaseNotes>Fixed swagger to interpret routes as lowercase always.</PackageReleaseNotes>
+    <Version>2.1.1.0</Version>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -24,7 +24,7 @@
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
-    <PackageReference Include="NetCoreApiExtensions.Shared" Version="1.3.3" />
+    <PackageReference Include="NetCoreApiExtensions.Shared" Version="1.3.4" />
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.4.0" />

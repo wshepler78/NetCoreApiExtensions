@@ -137,6 +137,10 @@ This folder structure will create 3 versions of the `WeatherForcastController` a
 
 # Change Log
 ---
+## 2.1.1
+* Updated swagger extensions to make the whole route lower case
+* Updated package references
+
 ## 2.1.0
 * Added formal middleware to handle Exceptions
   
