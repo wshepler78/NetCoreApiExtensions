@@ -137,6 +137,10 @@ This folder structure will create 3 versions of the `WeatherForcastController` a
 
 # Change Log
 ---
+## 2.1.2
+* Updated route formatter to not adjust casing on route variables. This still only allows 1 route variable token per resource segment
+  *  `/api/{goodId:int}/people/{peopleId:int}` should work
+
 ## 2.1.1
 * Updated swagger extensions to make the whole route lower case
 * Updated package references

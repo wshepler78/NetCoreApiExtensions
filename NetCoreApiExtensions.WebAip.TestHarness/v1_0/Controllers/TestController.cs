@@ -23,12 +23,22 @@ namespace NetCoreApiExtensions.WebAip.TestHarness.v1_0.Controllers
         }
 
         /// <summary>
+        /// Just Returns the Guid
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("{testId:Guid}/AndInteger/{ThisIsAReallyCrazyVariableNameId:int}")]
+        public async Task<DataResponse<Guid>> GetInteger([FromRoute] Guid testId, [FromRoute] int thisIsAReallyCrazyVariableNameId)
+        {
+            return await Task.FromResult(DataResponse<Guid>.Create(testId));
+        }
+
+        /// <summary>
         /// Just blows up.
         /// </summary>
         /// <returns></returns>
         [HttpGet]
         [Route("boom")]
-        public async Task<DataResponse<bool>> GetBoom()
+        public DataResponse<bool> GetBoom()
         {
             throw new NotFoundException("It's not here, like, for sure.");
         }

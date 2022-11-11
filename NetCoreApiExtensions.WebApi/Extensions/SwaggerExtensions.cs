@@ -84,8 +84,30 @@ public static class SwaggerExtensions
                             continue;
                         }
 
-                        var newKeyPart = keyPart.ToLowerInvariant();
-                        
+                        var startTokenIndex = keyPart.IndexOf('{');
+                        var endTokenIndex = keyPart.IndexOf('}');
+
+                        string newKeyPart = string.Empty;
+
+                        if (startTokenIndex >= 0 && endTokenIndex >= 0)
+                        {
+                            if (startTokenIndex > 0)
+                            {
+                                newKeyPart = keyPart[..startTokenIndex].ToLowerInvariant();
+                            }
+
+                            newKeyPart += keyPart.Substring(startTokenIndex, endTokenIndex + 1 - startTokenIndex);
+
+                            if (endTokenIndex < keyPart.Length - 1)
+                            {
+                                newKeyPart += keyPart[(endTokenIndex + 1)..].ToLowerInvariant();
+                            }
+                        }
+                        else
+                        {
+                            newKeyPart = keyPart.ToLowerInvariant();
+                        }
+
                         keyParts[index] = newKeyPart;
                     }
 
