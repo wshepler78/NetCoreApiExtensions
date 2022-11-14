@@ -16,7 +16,9 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        var app = builder.BuildNetCoreApi("Convention Test Harness");
+        var swaggerEnvironments = new List<string> {"test", "QA"};
+
+        var app = builder.BuildNetCoreApi("Convention Test Harness", enableSwaggerFor:swaggerEnvironments.ToArray());
         app.UseMiddleware<NetCoreApiExtensionsExceptionHandlingMiddleware>();
 
         app.UseHttpsRedirection();

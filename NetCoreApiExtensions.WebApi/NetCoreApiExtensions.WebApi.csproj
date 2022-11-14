@@ -11,12 +11,13 @@
     <RepositoryUrl>https://github.com/wshepler78/NetCoreApiExtensions</RepositoryUrl>
     <PackageTags>Core API, WebAPI, API Versioning</PackageTags>
     <PackageIcon>NetCoreApiExtensions_WebApi_icon.png</PackageIcon>
-    <AssemblyVersion>2.1.2.0</AssemblyVersion>
-    <FileVersion>2.1.2.0</FileVersion>
-    <PackageReleaseNotes>Fixed swagger to interpret routes as lowercase always.</PackageReleaseNotes>
-    <Version>2.1.2.0</Version>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <FileVersion>2.2.0.0</FileVersion>
+    <PackageReleaseNotes>Added support for explicitly specifying environments SwaggerUI is available in</PackageReleaseNotes>
+    <Version>2.2.0.0</Version>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Nullable>enable</Nullable>
+    <Configurations>Debug;Release;Test</Configurations>
   </PropertyGroup>
 
   <ItemGroup>

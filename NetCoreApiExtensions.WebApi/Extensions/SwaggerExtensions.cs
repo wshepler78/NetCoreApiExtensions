@@ -47,7 +47,7 @@ public static class SwaggerExtensions
     /// <returns></returns>
     public static IServiceCollection AddSwaggerDocumentation(this IServiceCollection services, string apiTitle)
     {
-        ConfigureSwaggerOptions.Title = apiTitle;
+        ConfigureSwaggerOptions.Title = $"{apiTitle}";
         services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
         services.AddSwaggerGen(options =>
         {

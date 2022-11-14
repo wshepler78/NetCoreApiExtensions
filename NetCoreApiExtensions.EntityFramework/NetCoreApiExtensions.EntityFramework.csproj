@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.1;net6;</TargetFrameworks>
+    <TargetFrameworks>netstandard2.1;net6;net7</TargetFrameworks>
     <AssemblyName>NetCoreApiExtensions.EntityFramework</AssemblyName>
     <RootNamespace>NetCoreApiExtensions.EntityFramework</RootNamespace>
     <Authors>Will Shepler</Authors>
@@ -12,11 +12,12 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/wshepler78/NetCoreApiExtensions</RepositoryUrl>
     <PackageTags>EFCore, EFExtensions, NetCore, API Tools</PackageTags>
-    <AssemblyVersion>2.0.0.0</AssemblyVersion>
-    <FileVersion>2.0.0.0</FileVersion>
-    <Version>2.0.0.0</Version>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+    <FileVersion>2.1.0.0</FileVersion>
+    <Version>2.1.0.0</Version>
     <PackageIcon>NetCoreApiExtensions_EntityFramework_icon.png</PackageIcon>
-    <PackageReleaseNotes>Added Net 6 Support</PackageReleaseNotes>
+    <PackageReleaseNotes>Added Net 7 Support</PackageReleaseNotes>
+    <Configurations>Debug;Release;Test</Configurations>
   </PropertyGroup>
 
   <ItemGroup>

@@ -9,6 +9,7 @@ There are other features and usages that are not fully documented here, but this
 | ----------- | ----------- | ---------- | ---------- |
 | `apiTitle` | `string` | | Tells SwaggerUI what title to display for your API |
 | `groupNameFormat` | `string` | `"'v'VVV"` | Tells the application how to format your API versions. Supports [ApiVersionFormatProvider](https://github.com/dotnet/aspnet-api-versioning/wiki/Version-Format) formats. |
+|`enableSwaggerFor` | `params string[]` | |Tells the application what environment names (in addition to "Development") to show theSwaggerUI in |
 
 ## VersionedApiControllerAttribute
 
@@ -137,6 +138,9 @@ This folder structure will create 3 versions of the `WeatherForcastController` a
 
 # Change Log
 ---
+## 2.2.0
+* Added a params collection parameter to `BuildNetCoreApi` extension that allow SwaggerUI to be turned on for additional Environment Names (Development is always included via `IsDevelopment()`)
+
 ## 2.1.2
 * Updated route formatter to not adjust casing on route variables. This still only allows 1 route variable token per resource segment
   *  `/api/{goodId:int}/people/{peopleId:int}` should work

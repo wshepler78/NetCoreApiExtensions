@@ -12,6 +12,7 @@
     <PackageTags>EFCore, EFExtensions, NetCore, EFCore.Relational, EntitiyFrameworkCore.Relational</PackageTags>
     <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
     <PackageIcon>NetCoreApiExtensions_EntityFramework_Relational_icon.png</PackageIcon>
+    <Configurations>Debug;Release;Test</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
