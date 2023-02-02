@@ -59,6 +59,26 @@ namespace NetCoreApiExtensions.Shared.Exceptions
             StreamingContext context) : base(info, context)
         {
         }
-
+        
+        /// <summary>
+        /// Executes supplied function, and throws a <exception cref="StatusCodeException"></exception> status code exception created from the errorConverter.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TR">The type of the exception to map.</typeparam>
+        /// <param name="method">The method.</param>
+        /// <param name="errorConverter">The error converter.</param>
+        /// <returns>T.</returns>
+        public static async Task<T> ExecuteAndThrowStatusCodeException<T, TR>(Func<Task<T>> method, Func<TR, StatusCodeException> errorConverter) where TR: Exception
+        {
+            try
+            {
+                return await method.Invoke();
+            }
+            catch (TR e)
+            {
+                var statusCodeException = errorConverter.Invoke(e);
+                throw statusCodeException;
+            }
+        }
     }
 }
