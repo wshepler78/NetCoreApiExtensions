@@ -1,6 +1,6 @@
 //using Microsoft.AspNetCore.Mvc;
 
-//namespace NetCoreApiExtensions.WebAip.TestHarness.Controllers
+//namespace NetCoreApiExtensions.WebApi.TestHarness.Controllers
 //{
 //    [ApiController]
 //    [Route("[controller]")]

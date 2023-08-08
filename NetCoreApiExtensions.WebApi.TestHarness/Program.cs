@@ -1,7 +1,7 @@
 using NetCoreApiExtensions.WebApi.Extensions;
 using NetCoreApiExtensions.WebApi.Middleware.ExceptionHandling;
 
-namespace NetCoreApiExtensions.WebAip.TestHarness;
+namespace NetCoreApiExtensions.WebApi.TestHarness;
 
 /// <summary>
 /// App Starting Class

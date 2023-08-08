@@ -2,7 +2,7 @@
 using NetCoreApiExtensions.Shared.Responses;
 using NetCoreApiExtensions.WebApi.Discovery;
 
-namespace NetCoreApiExtensions.WebAip.TestHarness.v2_0_beta.Controllers
+namespace NetCoreApiExtensions.WebApi.TestHarness.v2_0_beta.Controllers
 {
     /// <summary>
     /// Test Controller in v 2.0 beta

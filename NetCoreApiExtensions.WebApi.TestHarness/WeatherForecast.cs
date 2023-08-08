@@ -1,4 +1,4 @@
-namespace NetCoreApiExtensions.WebAip.TestHarness
+namespace NetCoreApiExtensions.WebApi.TestHarness
 {
     /// <summary>
     /// 

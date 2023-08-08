@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net6;net7;</TargetFrameworks>
+    <TargetFrameworks>net6.0;net7.0;netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Will Shepler, Garrett Davis</Authors>
@@ -14,9 +14,9 @@
     <RepositoryUrl>https://github.com/wshepler78/NetCoreApiExtensions</RepositoryUrl>
     <PackageProjectUrl>https://github.com/wshepler78/NetCoreApiExtensions</PackageProjectUrl>
     <PackageTags>NetCore, ErrorHandling, API Tools, Paging</PackageTags>
-    <AssemblyVersion>1.4.4</AssemblyVersion>
-    <FileVersion>1.4.4</FileVersion>
-    <Version>1.4.4</Version>
+    <AssemblyVersion>1.4.5</AssemblyVersion>
+    <FileVersion>1.4.5</FileVersion>
+    <Version>1.4.5</Version>
     <PackageIcon>NetCoreApiExtensions_Shared_icon.png</PackageIcon>
     <LangVersion>latest</LangVersion>
     <PackageReleaseNotes>Added Enum Helper for handling defaults</PackageReleaseNotes>

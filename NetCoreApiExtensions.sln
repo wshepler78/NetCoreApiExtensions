@@ -26,7 +26,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - API", "02 - API", "{A4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreApiExtensions.WebApi", "NetCoreApiExtensions.WebApi\NetCoreApiExtensions.WebApi.csproj", "{C9DC77DB-5626-4B11-8F8F-32A737799276}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreApiExtensions.WebAip.TestHarness", "NetCoreApiExtensions.WebAip.TestHarness\NetCoreApiExtensions.WebAip.TestHarness.csproj", "{E6CBF683-85F1-4F6E-B320-B7BFC0A8030F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreApiExtensions.WebApi.TestHarness", "NetCoreApiExtensions.WebApi.TestHarness\NetCoreApiExtensions.WebApi.TestHarness.csproj", "{E6CBF683-85F1-4F6E-B320-B7BFC0A8030F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreApiExtensions.Shared.UnitTests", "NetCoreApiExtensions.Shared.UnitTests\NetCoreApiExtensions.Shared.UnitTests.csproj", "{41CCC0C0-C019-42D3-80ED-E2621EA3CDCA}"
 EndProject
