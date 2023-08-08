@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Net;
 using System.Text;
+using NetCoreApiExtensions.Shared.Exceptions;
 
 namespace NetCoreApiExtensions.Shared.Extensions
 {

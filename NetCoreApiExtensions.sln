@@ -28,6 +28,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreApiExtensions.WebApi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreApiExtensions.WebAip.TestHarness", "NetCoreApiExtensions.WebAip.TestHarness\NetCoreApiExtensions.WebAip.TestHarness.csproj", "{E6CBF683-85F1-4F6E-B320-B7BFC0A8030F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreApiExtensions.Shared.UnitTests", "NetCoreApiExtensions.Shared.UnitTests\NetCoreApiExtensions.Shared.UnitTests.csproj", "{41CCC0C0-C019-42D3-80ED-E2621EA3CDCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,12 @@ Global
 		{E6CBF683-85F1-4F6E-B320-B7BFC0A8030F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E6CBF683-85F1-4F6E-B320-B7BFC0A8030F}.Test|Any CPU.ActiveCfg = Test|Any CPU
 		{E6CBF683-85F1-4F6E-B320-B7BFC0A8030F}.Test|Any CPU.Build.0 = Test|Any CPU
+		{41CCC0C0-C019-42D3-80ED-E2621EA3CDCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41CCC0C0-C019-42D3-80ED-E2621EA3CDCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41CCC0C0-C019-42D3-80ED-E2621EA3CDCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41CCC0C0-C019-42D3-80ED-E2621EA3CDCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41CCC0C0-C019-42D3-80ED-E2621EA3CDCA}.Test|Any CPU.ActiveCfg = Debug|Any CPU
+		{41CCC0C0-C019-42D3-80ED-E2621EA3CDCA}.Test|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +83,7 @@ Global
 		{E128C085-DF2F-47D0-AA8C-B37BF20601B5} = {38356E3B-5A1B-4613-882A-25B0E720E80B}
 		{C9DC77DB-5626-4B11-8F8F-32A737799276} = {A4C51428-F856-43ED-B733-74C5A664E54B}
 		{E6CBF683-85F1-4F6E-B320-B7BFC0A8030F} = {A4C51428-F856-43ED-B733-74C5A664E54B}
+		{41CCC0C0-C019-42D3-80ED-E2621EA3CDCA} = {D8AA137A-6E9E-402C-A867-54499F2E92A4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D81F7C5-0C31-4601-B172-BE0E0FD17036}
